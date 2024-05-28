@@ -1,0 +1,264 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Navbar Styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+nav button#search-button {
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 4px 4px 0; /* Rounded corners on the right side */
+    background-color: #ff5722;
+    color: #fff;
+    cursor: pointer;
+}
+
+nav button#login-button, nav button#signup-button {
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff5722;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* nav button {
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff5722;
+    color: #fff;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #e64a19;
+} */
+
+/* Movie Grid Styles */
+#movies-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(9, auto);
+    gap: 15px;
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.grid-item h2 {
+    font-size: 18px;
+    margin: 10px;
+}
+
+.grid-item p {
+    font-size: 16px;
+    margin: 0 10px 10px 10px;
+}
+
+.grid-item button {
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff5722;
+    color: #fff;
+    cursor: pointer;
+}
+
+.grid-item button:hover {
+    background-color: #e64a19;
+}
+
+/* Movie Details Styles */
+#movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#movie-image {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+#movie-description {
+    max-width: 800px;
+    text-align: left;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff5722;
+    color: #fff;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #e64a19;
+}
+
+.pagination span {
+    font-size: 18px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    position: static;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header, .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2, .modal-footer h2 {
+    margin: 0;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+input[type="text"], input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button.submit {
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff5722;
+    color: #fff;
+    cursor: pointer;
+}
+
+button.submit:hover {
+    background-color: #e64a19;
+}

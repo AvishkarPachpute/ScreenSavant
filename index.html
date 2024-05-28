@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Savant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <!-- <img src="logo.png" alt="Logo" class="logo"> -->
+            <h1>Screen Savant</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for a movie...">
+            <button id="search-button">Search</button>
+        </div>
+        <div class="nav-right">
+            <button id="login-button">Login</button>
+            <button id="signup-button">Signup</button>
+        </div>
+    </nav>
+    <div id="movies-grid"></div>
+    <div class="pagination">
+        <button id="prev-page">&#8249;</button>
+        <span id="page1">1</span>
+        <span id="page2">2</span>
+        <span id="page3">3</span>
+        <button id="next-page">&#8250;</button>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Screen Savant. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login</h2>
+                <span class="close" id="login-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="login-username" placeholder="Username">
+                <input type="password" id="login-password" placeholder="Password">
+            </div>
+            <div class="modal-footer">
+                <button class="submit" id="login-submit">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Signup</h2>
+                <span class="close" id="signup-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="signup-username" placeholder="Username">
+                <input type="password" id="signup-password" placeholder="Password">
+            </div>
+            <div class="modal-footer">
+                <button class="submit" id="signup-submit">Signup</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
